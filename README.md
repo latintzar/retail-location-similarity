@@ -1,8 +1,10 @@
 # Retail Location Similarity
 
+Find retail locations similar to your best-performing stores
+
 Retail Location Similarity is a map tool for comparing locations using H3 feature vectors and Leo’s calibrated distance score.
 
-![Retail Location Similarity example](https://atelierneyra.com/assets/product-motion-v3/retail-location-similarity.jpg)
+![Retail Location Similarity](https://atelierneyra.com/assets/product-motion-v3/retail-location-similarity.jpg)
 
 [Open demo](https://preview.atelierneyra.com/apps/retail-location-similarity/) · [Project website](https://atelierneyra.com/retail-location-similarity/) · [Documentation](https://docs.atelierneyra.com/retail-location-similarity/overview/) · [GitHub](https://github.com/latintzar/retail-location-similarity)
 
