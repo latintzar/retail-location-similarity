@@ -1,1 +1,84 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retail location similarity — local demo</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script defer src="https://unpkg.com/h3-js@4.1.0/dist/h3-js.umd.js"></script><style>*{box-sizing:border-box}body{margin:0;padding-top:var(--atelier-nav-height, 0px);font:16px/1.5 system-ui;background:#f6f5ef;color:#20251e}header{padding:22px 28px;border-bottom:1px solid #d9dcd1}h1{font-size:25px;margin:0}p{margin:6px 0}main{display:grid;grid-template-columns:340px 1fr;height:calc(100vh - var(--atelier-nav-height, 0px) - 112px)}aside{padding:24px;overflow:auto}button{font:inherit;cursor:pointer;border:1px solid #afb5a8;background:white;padding:10px 12px;margin:3px;border-radius:4px}input{width:100%;padding:8px;margin:4px 0 8px;border:1px solid #afb5a8}button:hover,button:focus-visible{border-color:#126f54}#map{height:100%;min-height:450px}#status{margin-top:18px}small{color:#555}ul{padding-left:20px}@media(max-width:700px){main{display:flex;height:auto;flex-direction:column}#map{height:55vh;min-height:360px}aside{padding:18px;order:2}#map{order:1}header{padding:18px}}</style></head><body><header><h1>Retail location similarity</h1><p>Compare London locations using Leo’s historic calibrated distance score.</p></header><main><aside><p><strong id="dataset">Synthetic example data</strong></p><p id="note">The locations are real H3 cells; their five features are synthetic and used to test the interface.</p><p>Choose a starting location:</p><div id="examples"><button data-lat="51.5117" data-lng="-0.124">Covent Garden</button><button data-lat="51.5255" data-lng="-0.078">Shoreditch</button><button data-lat="51.5136" data-lng="-0.135">Soho</button></div><form id="coordinates"><label>Latitude <input name="lat" type="number" step="any" required></label><label>Longitude <input name="lng" type="number" step="any" required></label><button type="submit">Compare coordinates</button></form><p><small>Matches exclude the immediate 15-ring neighbourhood. Select a highlighted cell to compare it.</small></p><p id="status" role="status">Choose a location to begin.</p><div id="results"></div><p><small id="source"></small></p></aside><div id="map" aria-label="Map of reference and similar locations"></div></main><script>window.addEventListener('DOMContentLoaded',()=>{const map=L.map('map').setView([51.515,-.105],12);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}).addTo(map);let layer=L.featureGroup().addTo(map);const status=document.querySelector('#status');fetch('api/source').then(r=>r.json()).then(d=>{document.querySelector('#dataset').textContent=d.dataset;document.querySelector('#note').textContent=d.coverage+' · '+d.features+' features';document.querySelector('#source').textContent=d.source+'. '+d.license+'. '+d.method;if(d.dataset==='London historical matrix')run(51.5117,-.124)});async function run(lat,lng){status.textContent='Calculating similarity across the dataset. This can take several minutes.';document.querySelector('#results').textContent='';try{const response=await fetch('api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({lat,lng,top_k:100})});const data=await response.json();if(!response.ok)throw Error(data.error);layer.clearLayers();const draw=(item,reference)=>{const points=h3.cellToBoundary(item.hex);const polygon=L.polygon(points,{color:reference?'#063b9c':'#b34520',fillOpacity:reference?.85:.2+item.value/180,weight:reference?3:1}).addTo(layer);polygon.bindPopup(reference?'Reference location':`Similarity: ${item.similarity.toFixed(2)}`);polygon.on('click',()=>{const [a,b]=h3.cellToLatLng(item.hex);run(a,b)})};draw(data.reference,true);data.similar_hexes.forEach(item=>draw(item,false));if(layer.getLayers().length)map.fitBounds(layer.getBounds().pad(.12));status.textContent=`${data.similar_hexes.length} matching cells across ${data.stats.feature_dimensions} features.`;const list=document.createElement('ul');data.similar_hexes.slice(0,5).forEach(item=>{const li=document.createElement('li');li.textContent=`${item.hex}: ${item.similarity.toFixed(2)}`;list.append(li)});document.querySelector('#results').append(list)}catch(e){status.textContent=e.message}}document.querySelector('#coordinates').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);run(+f.get('lat'),+f.get('lng'))});document.querySelectorAll('button[data-lat]').forEach(b=>b.addEventListener('click',()=>run(+b.dataset.lat,+b.dataset.lng)))})</script><script src="native-nav/atelier-nav.js" data-project="retail-location-similarity"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retail Location Similarity</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="https://unpkg.com/h3-js@4.1.0/dist/h3-js.umd.js"></script>
+<style>
+@font-face{font-family:Archivo;src:url('native-nav/atelier-nav-fonts/archivo-variable.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+*{box-sizing:border-box}body{margin:0;padding-top:var(--atelier-nav-height,0px);font:16px/1.5 Archivo,system-ui,sans-serif;background:#f6f5ef;color:#20251e}header{padding:20px 28px;border-bottom:1px solid #d9dcd1}h1{font-size:25px;line-height:1.2;margin:0}p{margin:6px 0}main{display:grid;grid-template-columns:340px minmax(0,1fr);grid-template-rows:auto 1fr;min-height:620px;height:calc(100dvh - var(--atelier-nav-height,56px) - 148px)}.controls{grid-column:1;grid-row:1;padding:24px 24px 8px}.results{grid-column:1;grid-row:2;padding:0 24px 20px;overflow:auto;min-height:0}#map{grid-column:2;grid-row:1/3;height:100%;min-height:450px;z-index:0}fieldset{border:0;padding:0;margin:20px 0 8px}legend{font-weight:600;margin-bottom:8px}#examples{display:grid;gap:6px}button,input{font:inherit}button{cursor:pointer;border:1px solid #afb5a8;background:white;padding:10px 12px;min-height:44px;border-radius:6px;text-align:left}button:hover{background:#e9eee4}button[aria-pressed=true]{border-color:#126f54;background:#e0eee5;color:#0c4c38}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #126f54;outline-offset:3px}input{width:100%;padding:10px;margin:4px 0 8px;border:1px solid #afb5a8;border-radius:6px}#coordinates{margin:20px 0}#coordinates[hidden]{display:none}#status{margin:14px 0 8px;font-size:14px}.dataset-detail{color:#555;font-size:14px}h2{font-size:16px;margin:16px 0 8px}.ranked{list-style:none;margin:0;padding:0}.ranked li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #d9dcd1;font-size:14px}.ranked button{padding:4px 8px;max-width:100%;font-size:14px;min-height:44px}.result-heading{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:16px 0 8px}.result-heading h2{margin:0}.result-heading button{font-size:13px;padding:6px 9px}.ranked span{white-space:nowrap}a{color:#175c46;text-decoration:none;border-radius:6px}a:hover{background:#e2e6db}a.action{display:inline-flex;align-items:center;min-height:44px;padding:6px 0;margin-top:8px}.attribution{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;padding:10px 28px;border-top:1px solid #d9dcd1;font-size:12px}.attribution a{display:inline-flex;align-items:center;min-height:32px}#mode-note{font-size:13px;color:#555;margin-top:14px}.leaflet-container{font-family:Archivo,system-ui,sans-serif}.leaflet-popup-content{overflow-wrap:anywhere}.leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important}.leaflet-popup-close-button{width:44px!important;height:44px!important;line-height:44px!important;font-size:24px!important}.leaflet-popup-content{padding-right:16px}
+@media(max-width:700px){header{padding:16px 18px}h1{font-size:22px}header p{font-size:14px}main{display:flex;flex-direction:column;height:auto;min-height:0}.controls{padding:16px 18px 8px;order:1}fieldset{margin:12px 0 4px}#examples{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}#examples button{font-size:14px;line-height:1.25;text-align:center;padding:9px 5px;min-height:48px}.dataset-detail{font-size:13px}#status{margin:8px 0}#map{height:52svh;min-height:360px;order:2}.results{padding:0 18px 18px;order:3;overflow:visible}.attribution{padding:10px 18px}.attribution a{min-height:44px}.ranked{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.ranked li{min-width:0;flex-wrap:wrap;gap:0}.ranked button{font-size:12px}#mode-note{margin:8px 0}a.action{margin:0}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><h1>Retail Location Similarity</h1><p>Find areas like a reference retail location.</p></header>
+<main>
+<aside class="controls">
+<strong id="dataset">London · December 2025</strong>
+<p class="dataset-detail" id="coverage">131,596 cells · 1,956 features</p>
+<fieldset><legend>Reference location</legend><div id="examples">
+<button data-preset="8a194ad324f7fff" aria-pressed="false">Covent Garden</button>
+<button data-preset="8a194ad346affff" aria-pressed="false">Shoreditch</button>
+<button data-preset="8a195da498e7fff" aria-pressed="false">Soho</button>
+</div></fieldset>
+<form id="coordinates" hidden><label>Latitude<input name="lat" type="number" step="any" required></label><label>Longitude<input name="lng" type="number" step="any" required></label><button type="submit">Compare coordinates</button></form>
+<p id="status" role="status" aria-live="polite">Loading Covent Garden…</p>
+</aside>
+<section id="results" class="results" aria-label="Ranked location matches"></section>
+<div id="map" aria-label="Map of reference and similar locations"></div>
+</main>
+<footer class="attribution" aria-label="Data attribution">
+<span>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, <a href="https://overturemaps.org" target="_blank" rel="noopener">Overture Maps Foundation</a></span>
+<a id="license" href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a>
+<a id="download" href="https://github.com/latintzar/retail-location-similarity/releases/download/london-2025-12-v1/london-res10.parquet">Download London data</a>
+<a href="data/london/NOTICES.md" target="_blank" rel="noopener">Source notices</a>
+</footer>
+<script>
+window.addEventListener('DOMContentLoaded',async()=>{
+ const status=document.querySelector('#status'),results=document.querySelector('#results');
+ if(!window.L||!window.h3){status.textContent='Reload to load the map libraries.';return}
+ const map=L.map('map').setView([51.515,-.105],12);
+ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}).addTo(map);
+ const layer=L.featureGroup().addTo(map),polygons=new Map();let source,requestNumber=0,currentRequest;
+ const resize=new ResizeObserver(()=>map.invalidateSize());resize.observe(document.querySelector('#map'));
+ function showCell(hex){const polygon=polygons.get(hex);if(polygon){map.panTo(polygon.getBounds().getCenter());polygon.openPopup()}}
+ async function run(request){
+  const number=++requestNumber;if(currentRequest)currentRequest.abort();currentRequest=new AbortController();
+  status.textContent=source?.full_queries?'Comparing the supplied matrix…':'Loading original London matches…';
+  try{
+   const response=await fetch('api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...request,top_k:100}),signal:currentRequest.signal});
+   const data=await response.json();if(!response.ok)throw Error(data.error);if(number!==requestNumber)return;
+   layer.clearLayers();polygons.clear();
+   function draw(item,reference){
+    const polygon=L.polygon(h3.cellToBoundary(item.hex),{color:reference?'#063b9c':'#b34520',fillOpacity:reference?.85:.2+item.value/180,weight:reference?3:1}).addTo(layer);
+    const content=document.createElement('div');const name=document.createElement('strong');name.textContent=reference?(data.cache_provenance?.name||'Reference location'):`Similarity ${item.similarity.toFixed(2)}`;content.append(name,document.createElement('br'),document.createTextNode(item.hex));polygon.bindPopup(content);polygons.set(item.hex,polygon);
+    if(source.full_queries)polygon.on('click',()=>{const [lat,lng]=h3.cellToLatLng(item.hex);run({lat,lng})});
+   }
+   draw(data.reference,true);data.similar_hexes.forEach(item=>draw(item,false));if(layer.getLayers().length)map.fitBounds(layer.getBounds().pad(.12),{animate:false});
+   document.querySelectorAll('[data-preset]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.preset===data.reference.hex)));
+   status.textContent=`${data.similar_hexes.length} matches.`;
+   results.replaceChildren();const heading=document.createElement('div');heading.className='result-heading';const title=document.createElement('h2');title.textContent='Closest matches';const download=document.createElement('button');download.type='button';download.textContent='Download results';download.addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=`london-${data.reference.hex}-100-matches.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});heading.append(title,download);results.append(heading);const list=document.createElement('ol');list.className='ranked';
+   data.similar_hexes.slice(0,5).forEach((item,index)=>{const li=document.createElement('li'),button=document.createElement('button'),score=document.createElement('span');button.textContent=`Match ${index+1}`;button.setAttribute('aria-label',`Show match ${index+1}, similarity ${item.similarity.toFixed(2)}`);button.addEventListener('click',()=>showCell(item.hex));score.textContent=item.similarity.toFixed(2);li.append(button,score);list.append(li)});results.append(list);
+  }catch(error){if(error.name!=='AbortError'&&number===requestNumber)status.textContent=error.message}
+ }
+ document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>run({preset:button.dataset.preset})));
+ document.querySelector('#coordinates').addEventListener('submit',event=>{event.preventDefault();const values=new FormData(event.target);run({lat:+values.get('lat'),lng:+values.get('lng')})});
+ try{
+  const response=await fetch('api/source');if(!response.ok)throw Error('Reload to load the data source.');source=await response.json();
+  document.querySelector('#dataset').textContent=source.dataset==='London historical matrix'?'London · December 2025':source.dataset;
+  document.querySelector('#coverage').textContent=source.dataset==='London historical matrix'?'131,596 cells · 1,956 features':source.coverage+' · '+source.features+' features';
+  document.querySelector('#coordinates').hidden=!source.full_queries;
+  if(!source.data_url){document.querySelector('#download').hidden=true;document.querySelector('#license').hidden=true}
+  await run({preset:'8a194ad324f7fff'});
+ }catch(error){status.textContent=error.message}
+ document.addEventListener('keydown',event=>{if(event.key==='Escape')map.closePopup()});
+ window.addEventListener('pagehide',()=>{currentRequest?.abort();resize.disconnect()},{once:true});
+});
+</script>
+<script src="native-nav/atelier-nav.js" data-project="retail-location-similarity"></script>
+</body>
+</html>

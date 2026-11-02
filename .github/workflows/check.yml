@@ -1,4 +1,4 @@
-name: Synthetic scorer checks
+name: London data and scorer checks
 on: [push, pull_request]
 permissions:
   contents: read

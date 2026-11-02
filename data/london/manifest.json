@@ -1,0 +1,29 @@
+{
+  "name": "London geographic feature matrix",
+  "filename": "london-res10.parquet",
+  "bytes": 56163548,
+  "sha256": "3e56da16150bc01b7b8a9e84d7d68c85eb76210fc0a0d2916801aafd1dabab5f",
+  "rows": 131596,
+  "columns": 1957,
+  "numeric_features": 1956,
+  "h3_resolution": 10,
+  "format": "Parquet",
+  "created_by": "DuckDB version v1.4.3 (build d1dc88f950)",
+  "cell_center_bounds": {
+    "south": 51.28620740316892,
+    "north": 51.69235845224992,
+    "west": -0.5112384316770263,
+    "east": 0.33483676118467326
+  },
+  "release": "2025-12-17.0",
+  "download_url": "https://github.com/latintzar/retail-location-similarity/releases/download/london-2025-12-v1/london-res10.parquet",
+  "database_license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "source_attribution": "\u00a9 OpenStreetMap contributors, Overture Maps Foundation",
+  "schema_file": "schema.json",
+  "notices_file": "NOTICES.md",
+  "preset_cache_sha256": "92ee4b4b4ee48ff1c8221f788c3d06a6872a9eec8f01585f6497cf569b502632",
+  "upstream_attribution": "https://github.com/OvertureMaps/docs/blob/c9b6a5630019536b1a58ac09bac839ef0ce7ec9c/docs/attribution.mdx",
+  "provenance": "The recovered output and retained builder point to Overture 2025-12-17.0. The exact executed ETL revision/configuration and per-record suppliers were not embedded in the output. Applicable contemporaneous theme notices are retained as a superset.",
+  "provenance_review_date": "2026-11-02"
+}

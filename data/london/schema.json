@@ -1,0 +1,7837 @@
+{
+  "dataset": "London historical geographic feature matrix",
+  "matrix_sha256": "3e56da16150bc01b7b8a9e84d7d68c85eb76210fc0a0d2916801aafd1dabab5f",
+  "rows": 131596,
+  "numeric_features": 1956,
+  "h3_resolution": 10,
+  "column_order": [
+    {
+      "name": "h3_index",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "cafe_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "building_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "avg_building_height",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "avg_floors",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "building_density",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_20k_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_20k_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_small_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_small_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nature_reserve_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nature_reserve_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lake_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lake_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "river_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "river_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "trunk_road_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "primary_road_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "secondary_road_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "language_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tobacco_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "convenience_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "footway_in_hex",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "motorway_road_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpenter_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "living_street_in_hex",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gym_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "residential_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "residential_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "residential_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_2m_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_2m_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elementary_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tutoring_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ev_charging_station_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_salon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_broker_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "property_management_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meadow_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meadow_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meadow_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "preschool_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "retail_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "retail_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "retail_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fish_and_chips_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coffee_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_venue_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gas_station_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_dealer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_car_dealer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "real_estate_agent_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dentist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pharmacy_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sporting_goods_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doctor_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surgeon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmland_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmland_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmland_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "police_department_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pedestrian_in_hex",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "asian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "diner_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chicken_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "malaysian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tennis_court_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cycleway_in_hex",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "advertising_agency_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landscaping_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "high_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "recreation_ground_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "recreation_ground_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "recreation_ground_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "playground_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tanning_salon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dietitian_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "catholic_church_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "resort_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_gallery_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "accountant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marketing_agency_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plumbing_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beauty_salon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "commercial_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "commercial_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "commercial_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brewery_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "private_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "veterinarian_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "supermarket_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "grocery_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hardware_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_therapy_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chiropractor_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nutritionist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shoe_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "florist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bed_and_breakfast_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_storage_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "american_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chinese_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pub_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "italian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegan_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bakery_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_cream_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "liquor_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "clothing_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jewelry_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gift_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpet_cleaning_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "web_designer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegetarian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bubble_tea_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fast_food_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cocktail_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cinema_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nail_salon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "antique_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "costume_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "train_station_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nature_reserve_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nature_reserve_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nature_reserve_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "furniture_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_decor_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roofing_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_food_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brownfield_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brownfield_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brownfield_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dermatologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_health_care_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "computer_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "toy_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "industrial_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "industrial_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "industrial_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "post_office_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pet_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "photographer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "physical_therapy_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pakistani_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bangladeshi_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "amusement_park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "acupuncture_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pawn_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thai_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "insurance_agency_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "storage_facility_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "buddhist_temple_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "campground_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pond_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pond_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "french_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "river_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "river_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "optometrist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sunglasses_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "appliance_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "construction_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "construction_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "construction_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cemetery_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cemetery_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cemetery_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allotments_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allotments_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allotments_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pilates_studio_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospital_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "turkish_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lebanese_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "party_supply_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "evangelical_church_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "architect_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "electrician_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "yoga_studio_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mosque_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "casino_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "currency_exchange_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "department_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_phone_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mattress_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orchard_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orchard_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orchard_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "community_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cultural_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "courthouse_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shopping_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tea_room_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_wash_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "greek_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "makeup_artist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lawyer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "printing_services_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pizza_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skin_care_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "library_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sri_lankan_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "legal_services_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "african_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "caribbean_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "internet_cafe_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "discount_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dance_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wildlife_sanctuary_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lounge_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fire_department_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "korean_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doner_kebab_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wine_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_hair_removal_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "breakfast_and_brunch_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "spanish_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drama_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lodge_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "reflexology_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_surgeon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shooting_range_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drugstore_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "video_game_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "swimming_pool_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmers_market_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vietnamese_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hostel_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mediterranean_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burger_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "steakhouse_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_entertainment_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "monument_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "souvenir_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "translation_services_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "day_spa_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baptist_church_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "painting_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "moroccan_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "watch_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "graphic_designer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coworking_space_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sushi_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ethiopian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "portuguese_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hookah_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thrift_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "outdoor_gear_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nursing_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "barbecue_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mexican_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brazilian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "speakeasy_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bagel_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "japanese_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "botanical_garden_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allergist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "peruvian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "golf_course_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "permanent_makeup_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "temp_agency_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "metro_station_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "motorcycle_dealer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "urologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cardiologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "neurologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychiatrist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plastic_surgeon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatric_dentist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_dentist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "occupational_therapy_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "military_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "military_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "military_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "irish_pub_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_security_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lake_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lake_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "auto_detailing_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_hall_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cupcake_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthodontist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marina_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bridge_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_eastern_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "guest_house_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabin_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "handyman_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "leather_goods_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pentecostal_church_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gymnastics_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "quarry_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "quarry_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "quarry_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "salsa_club_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hindu_temple_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "synagogue_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "strip_club_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "waxing_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cricket_ground_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "flight_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tire_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "towing_service_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_lender_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burmese_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "town_hall_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aquarium_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "distillery_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dog_park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_truck_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fair_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bus_station_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "afghan_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "credit_union_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_extensions_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "soccer_field_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skate_park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_range_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "emergency_room_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "comedy_club_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_coach_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthopedist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "montessori_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beach_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_cleaning_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "history_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "arcade_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cheese_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_market_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hot_dog_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "service_apartments_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "education_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "education_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "education_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dim_sum_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rehabilitation_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bookkeeper_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_store_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dive_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oral_surgeon_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ophthalmologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vineyard_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vineyard_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vineyard_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bowling_alley_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "castle_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aesthetician_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "polish_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "visitor_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "paintball_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "zoo_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baseball_field_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meditation_center_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landfill_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landfill_in_hex_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landfill_avg_area_m2",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "videographer_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bingo_hall_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cottage_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cuban_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "israeli_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_tag_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drive_in_theater_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "basketball_court_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jamaican_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "archery_range_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "taco_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_court_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "champagne_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tiki_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aviation_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sikh_temple_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_hospital_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gay_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tower_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "public_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gastroenterologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endocrinologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rheumatologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "science_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "latin_american_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "boxing_gym_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oncologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "circus_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "filipino_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hawaiian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "piano_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "periodontist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_school_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospice_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "singaporean_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pressure_washing_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sauna_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "water_park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "syrian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "after_school_program_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endodontist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "palace_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roller_skating_rink_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_home_park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fondue_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sake_bar_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "southern_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nephrologist_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_garden_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "squash_court_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dominican_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "teeth_whitening_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "badminton_court_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "prosthetics_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_skating_rink_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "german_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatrician_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "planetarium_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "inn_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ski_resort_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "observatory_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pension_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roadside_assistance_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indonesian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "contemporary_art_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_lounge_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabaret_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "russian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "volleyball_court_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rv_park_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "animal_hospital_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_bookstore_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "batting_cage_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surf_shop_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "design_museum_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cannabis_dispensary_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cambodian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "trinidadian_restaurant_count",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "diner_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "diner_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "diner_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "diner_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "american_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "american_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "american_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "american_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "breakfast_and_brunch_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "breakfast_and_brunch_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "breakfast_and_brunch_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "breakfast_and_brunch_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "barbecue_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "barbecue_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "barbecue_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "barbecue_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "filipino_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "filipino_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "filipino_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "filipino_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brazilian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brazilian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brazilian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brazilian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pakistani_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pakistani_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pakistani_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pakistani_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "caribbean_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "caribbean_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "caribbean_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "caribbean_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bangladeshi_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bangladeshi_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bangladeshi_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bangladeshi_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "greek_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "greek_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "greek_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "greek_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "african_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "african_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "african_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "african_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sri_lankan_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sri_lankan_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sri_lankan_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sri_lankan_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "portuguese_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "portuguese_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "portuguese_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "portuguese_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "japanese_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "japanese_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "japanese_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "japanese_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "french_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "french_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "french_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "french_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mexican_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mexican_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mexican_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mexican_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "steakhouse_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "steakhouse_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "steakhouse_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "steakhouse_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hookah_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hookah_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hookah_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hookah_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doner_kebab_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doner_kebab_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doner_kebab_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doner_kebab_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mediterranean_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mediterranean_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mediterranean_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mediterranean_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "asian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "asian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "asian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "asian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "irish_pub_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "irish_pub_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "irish_pub_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "irish_pub_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burger_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burger_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burger_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burger_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "turkish_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "turkish_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "turkish_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "turkish_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cocktail_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cocktail_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cocktail_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cocktail_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lounge_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lounge_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lounge_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lounge_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thai_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thai_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thai_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thai_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sushi_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sushi_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sushi_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sushi_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chicken_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chicken_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chicken_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chicken_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "italian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "italian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "italian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "italian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fish_and_chips_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fish_and_chips_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fish_and_chips_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fish_and_chips_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chinese_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chinese_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chinese_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chinese_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pizza_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pizza_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pizza_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pizza_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fast_food_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fast_food_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fast_food_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fast_food_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pub_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pub_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pub_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pub_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegetarian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegetarian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegetarian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegetarian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vietnamese_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vietnamese_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vietnamese_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vietnamese_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lebanese_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lebanese_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lebanese_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lebanese_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "afghan_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "afghan_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "afghan_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "afghan_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "latin_american_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "latin_american_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "latin_american_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "latin_american_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dim_sum_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dim_sum_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dim_sum_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dim_sum_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jamaican_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jamaican_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jamaican_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jamaican_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "taco_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "taco_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "taco_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "taco_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegan_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegan_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegan_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "vegan_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "malaysian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "malaysian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "malaysian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "malaysian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_garden_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_garden_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_garden_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beer_garden_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_eastern_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_eastern_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_eastern_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_eastern_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dive_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dive_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dive_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dive_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brewery_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brewery_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brewery_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "brewery_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ethiopian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ethiopian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ethiopian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ethiopian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "spanish_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "spanish_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "spanish_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "spanish_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "polish_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "polish_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "polish_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "polish_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "korean_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "korean_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "korean_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "korean_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "syrian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "syrian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "syrian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "syrian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "israeli_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "israeli_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "israeli_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "israeli_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burmese_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burmese_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burmese_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "burmese_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "moroccan_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "moroccan_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "moroccan_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "moroccan_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "peruvian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "peruvian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "peruvian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "peruvian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "german_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "german_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "german_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "german_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "russian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "russian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "russian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "russian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hawaiian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hawaiian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hawaiian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hawaiian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cuban_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cuban_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cuban_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cuban_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "champagne_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "champagne_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "champagne_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "champagne_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_lounge_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_lounge_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_lounge_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_lounge_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gay_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gay_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gay_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gay_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hot_dog_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hot_dog_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hot_dog_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hot_dog_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indonesian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indonesian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indonesian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "indonesian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "speakeasy_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "speakeasy_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "speakeasy_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "speakeasy_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dominican_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dominican_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dominican_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dominican_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fondue_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fondue_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fondue_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fondue_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "singaporean_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "singaporean_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "singaporean_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "singaporean_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cambodian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cambodian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cambodian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cambodian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "southern_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "southern_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "southern_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "southern_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sake_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sake_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sake_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sake_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "trinidadian_restaurant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "trinidadian_restaurant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "trinidadian_restaurant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "trinidadian_restaurant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bagel_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bagel_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bagel_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bagel_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cupcake_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cupcake_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cupcake_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cupcake_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "internet_cafe_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "internet_cafe_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "internet_cafe_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "internet_cafe_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "campground_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "campground_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "campground_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "campground_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hostel_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hostel_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hostel_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hostel_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bed_and_breakfast_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bed_and_breakfast_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bed_and_breakfast_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bed_and_breakfast_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bubble_tea_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bubble_tea_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bubble_tea_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bubble_tea_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_cream_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_cream_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_cream_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_cream_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tea_room_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tea_room_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tea_room_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tea_room_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pilates_studio_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pilates_studio_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pilates_studio_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pilates_studio_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "resort_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "resort_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "resort_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "resort_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wine_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wine_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wine_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wine_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "yoga_studio_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "yoga_studio_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "yoga_studio_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "yoga_studio_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hotel_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bakery_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bakery_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bakery_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bakery_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gym_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gym_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gym_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gym_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coffee_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coffee_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coffee_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coffee_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cafe_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cafe_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cafe_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cafe_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lodge_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lodge_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lodge_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lodge_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ski_resort_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ski_resort_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ski_resort_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ski_resort_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pension_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pension_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pension_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pension_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "guest_house_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "guest_house_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "guest_house_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "guest_house_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "service_apartments_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "service_apartments_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "service_apartments_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "service_apartments_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rv_park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rv_park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rv_park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rv_park_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "boxing_gym_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "boxing_gym_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "boxing_gym_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "boxing_gym_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "distillery_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "distillery_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "distillery_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "distillery_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabin_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabin_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabin_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabin_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cottage_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cottage_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cottage_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cottage_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "piano_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "piano_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "piano_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "piano_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tiki_bar_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tiki_bar_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tiki_bar_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tiki_bar_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "salsa_club_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "salsa_club_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "salsa_club_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "salsa_club_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "inn_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "inn_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "inn_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "inn_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bingo_hall_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bingo_hall_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bingo_hall_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bingo_hall_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shooting_range_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shooting_range_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shooting_range_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shooting_range_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bowling_alley_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bowling_alley_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bowling_alley_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bowling_alley_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_hall_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_hall_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_hall_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_hall_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "soccer_field_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "soccer_field_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "soccer_field_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "soccer_field_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tennis_court_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tennis_court_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tennis_court_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tennis_court_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gymnastics_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gymnastics_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gymnastics_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gymnastics_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cinema_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cinema_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cinema_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cinema_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cricket_ground_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cricket_ground_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cricket_ground_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cricket_ground_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "casino_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "casino_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "casino_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "casino_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "golf_course_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "golf_course_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "golf_course_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "golf_course_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_venue_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_venue_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_venue_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_venue_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "swimming_pool_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "swimming_pool_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "swimming_pool_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "swimming_pool_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baseball_field_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baseball_field_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baseball_field_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baseball_field_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "comedy_club_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "comedy_club_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "comedy_club_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "comedy_club_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "circus_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "circus_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "circus_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "circus_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "arcade_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "arcade_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "arcade_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "arcade_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "squash_court_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "squash_court_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "squash_court_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "squash_court_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_range_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_range_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_range_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_range_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "archery_range_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "archery_range_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "archery_range_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "archery_range_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_skating_rink_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_skating_rink_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_skating_rink_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ice_skating_rink_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drive_in_theater_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drive_in_theater_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drive_in_theater_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drive_in_theater_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roller_skating_rink_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roller_skating_rink_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roller_skating_rink_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roller_skating_rink_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "basketball_court_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "basketball_court_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "basketball_court_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "basketball_court_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "badminton_court_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "badminton_court_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "badminton_court_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "badminton_court_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabaret_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabaret_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabaret_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cabaret_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "volleyball_court_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "volleyball_court_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "volleyball_court_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "volleyball_court_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_tag_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_tag_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_tag_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_tag_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aquarium_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aquarium_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aquarium_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aquarium_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fair_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fair_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fair_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fair_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "monument_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "monument_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "monument_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "monument_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "amusement_park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "amusement_park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "amusement_park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "amusement_park_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "auto_detailing_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "auto_detailing_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "auto_detailing_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "auto_detailing_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "motorcycle_dealer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "motorcycle_dealer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "motorcycle_dealer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "motorcycle_dealer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_wash_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_wash_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_wash_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_wash_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gas_station_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gas_station_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gas_station_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gas_station_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_car_dealer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_car_dealer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_car_dealer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_car_dealer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_dealer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_dealer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_dealer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "car_dealer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_gallery_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_gallery_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_gallery_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_gallery_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ev_charging_station_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ev_charging_station_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ev_charging_station_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ev_charging_station_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tire_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tire_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tire_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tire_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_entertainment_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_entertainment_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_entertainment_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_entertainment_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "contemporary_art_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "contemporary_art_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "contemporary_art_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "contemporary_art_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "zoo_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "zoo_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "zoo_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "zoo_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cultural_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cultural_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cultural_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cultural_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "paintball_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "paintball_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "paintball_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "paintball_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bridge_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bridge_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bridge_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bridge_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "history_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "history_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "history_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "history_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "observatory_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "observatory_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "observatory_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "observatory_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "botanical_garden_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "botanical_garden_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "botanical_garden_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "botanical_garden_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "palace_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "palace_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "palace_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "palace_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "visitor_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "visitor_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "visitor_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "visitor_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "science_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "science_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "science_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "science_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "planetarium_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "planetarium_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "planetarium_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "planetarium_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "water_park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "water_park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "water_park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "water_park_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wildlife_sanctuary_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wildlife_sanctuary_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wildlife_sanctuary_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "wildlife_sanctuary_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "batting_cage_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "batting_cage_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "batting_cage_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "batting_cage_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tower_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tower_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tower_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tower_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "castle_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "castle_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "castle_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "castle_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "strip_club_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "strip_club_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "strip_club_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "strip_club_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aviation_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aviation_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aviation_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aviation_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "design_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "design_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "design_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "design_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_museum_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_museum_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_museum_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sports_museum_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "after_school_program_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "after_school_program_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "after_school_program_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "after_school_program_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "waxing_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "waxing_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "waxing_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "waxing_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "towing_service_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "towing_service_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "towing_service_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "towing_service_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "art_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_hair_removal_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_hair_removal_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_hair_removal_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "laser_hair_removal_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "acupuncture_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "acupuncture_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "acupuncture_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "acupuncture_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "day_spa_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "day_spa_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "day_spa_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "day_spa_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skin_care_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skin_care_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skin_care_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skin_care_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "high_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "high_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "high_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "high_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "private_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "private_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "private_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "private_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "music_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_therapy_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_therapy_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_therapy_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "massage_therapy_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nail_salon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nail_salon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nail_salon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nail_salon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tanning_salon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tanning_salon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tanning_salon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tanning_salon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dance_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dance_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dance_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dance_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_salon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_salon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_salon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_salon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beauty_salon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beauty_salon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beauty_salon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beauty_salon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "preschool_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "preschool_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "preschool_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "preschool_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tutoring_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tutoring_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tutoring_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tutoring_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elementary_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elementary_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elementary_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elementary_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "makeup_artist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "makeup_artist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "makeup_artist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "makeup_artist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_extensions_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_extensions_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_extensions_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hair_extensions_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "public_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "public_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "public_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "public_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "reflexology_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "reflexology_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "reflexology_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "reflexology_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drama_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drama_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drama_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drama_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "montessori_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "montessori_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "montessori_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "montessori_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "religious_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sauna_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sauna_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sauna_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sauna_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "middle_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "teeth_whitening_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "teeth_whitening_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "teeth_whitening_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "teeth_whitening_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "permanent_makeup_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "permanent_makeup_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "permanent_makeup_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "permanent_makeup_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aesthetician_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aesthetician_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aesthetician_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "aesthetician_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roadside_assistance_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roadside_assistance_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roadside_assistance_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roadside_assistance_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "credit_union_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "credit_union_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "credit_union_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "credit_union_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bookkeeper_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bookkeeper_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bookkeeper_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bookkeeper_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nursing_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nursing_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nursing_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nursing_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatrician_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatrician_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatrician_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatrician_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surgeon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surgeon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surgeon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surgeon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_dentist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_dentist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_dentist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_dentist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthodontist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthodontist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthodontist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthodontist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plastic_surgeon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plastic_surgeon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plastic_surgeon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plastic_surgeon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pawn_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pawn_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pawn_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pawn_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drugstore_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drugstore_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drugstore_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "drugstore_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_broker_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_broker_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_broker_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_broker_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "library_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "library_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "library_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "library_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "optometrist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "optometrist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "optometrist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "optometrist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "insurance_agency_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "insurance_agency_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "insurance_agency_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "insurance_agency_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospital_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospital_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospital_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospital_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "currency_exchange_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "currency_exchange_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "currency_exchange_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "currency_exchange_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "medical_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doctor_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doctor_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doctor_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "doctor_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pharmacy_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pharmacy_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pharmacy_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pharmacy_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dentist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dentist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dentist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dentist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "driving_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "accountant_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "accountant_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "accountant_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "accountant_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "real_estate_agent_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "real_estate_agent_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "real_estate_agent_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "real_estate_agent_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_surgeon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_surgeon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_surgeon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cosmetic_surgeon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dermatologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dermatologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dermatologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dermatologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "language_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "language_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "language_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "language_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_lender_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_lender_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_lender_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mortgage_lender_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oral_surgeon_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oral_surgeon_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oral_surgeon_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oral_surgeon_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatric_dentist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatric_dentist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatric_dentist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pediatric_dentist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endodontist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endodontist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endodontist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endodontist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospice_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospice_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospice_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hospice_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rheumatologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rheumatologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rheumatologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rheumatologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rehabilitation_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rehabilitation_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rehabilitation_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "rehabilitation_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthopedist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthopedist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthopedist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "orthopedist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychiatrist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychiatrist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychiatrist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "psychiatrist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "flight_school_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "flight_school_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "flight_school_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "flight_school_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "urologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "urologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "urologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "urologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cardiologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cardiologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cardiologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cardiologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ophthalmologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ophthalmologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ophthalmologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "ophthalmologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "emergency_room_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "emergency_room_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "emergency_room_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "emergency_room_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "neurologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "neurologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "neurologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "neurologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endocrinologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endocrinologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endocrinologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "endocrinologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "periodontist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "periodontist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "periodontist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "periodontist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gastroenterologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gastroenterologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gastroenterologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gastroenterologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allergist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allergist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allergist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "allergist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oncologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oncologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oncologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "oncologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_hospital_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_hospital_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_hospital_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "childrens_hospital_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nephrologist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nephrologist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nephrologist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nephrologist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chiropractor_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chiropractor_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chiropractor_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "chiropractor_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_coach_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_coach_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_coach_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_coach_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thrift_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thrift_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thrift_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "thrift_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nutritionist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nutritionist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nutritionist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "nutritionist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_food_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_food_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_food_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "health_food_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shopping_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shopping_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shopping_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shopping_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "outdoor_gear_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "outdoor_gear_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "outdoor_gear_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "outdoor_gear_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "department_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "department_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "department_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "department_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "liquor_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "liquor_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "liquor_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "liquor_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "physical_therapy_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "physical_therapy_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "physical_therapy_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "physical_therapy_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "veterinarian_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "veterinarian_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "veterinarian_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "veterinarian_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_health_care_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_health_care_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_health_care_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_health_care_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "clothing_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "clothing_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "clothing_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "clothing_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "convenience_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "convenience_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "convenience_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "convenience_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "supermarket_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "supermarket_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "supermarket_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "supermarket_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "grocery_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "grocery_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "grocery_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "grocery_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "prosthetics_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "prosthetics_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "prosthetics_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "prosthetics_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmers_market_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmers_market_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmers_market_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "farmers_market_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_market_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_market_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_market_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "seafood_market_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cheese_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cheese_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cheese_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cheese_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "occupational_therapy_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "occupational_therapy_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "occupational_therapy_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "occupational_therapy_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "animal_hospital_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "animal_hospital_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "animal_hospital_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "animal_hospital_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surf_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surf_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surf_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "surf_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dietitian_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dietitian_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dietitian_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dietitian_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cannabis_dispensary_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cannabis_dispensary_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cannabis_dispensary_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "cannabis_dispensary_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "watch_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "watch_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "watch_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "watch_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "leather_goods_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "leather_goods_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "leather_goods_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "leather_goods_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "costume_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "costume_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "costume_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "costume_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_decor_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_decor_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_decor_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_decor_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "florist_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "florist_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "florist_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "florist_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "video_game_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "video_game_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "video_game_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "video_game_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "party_supply_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "party_supply_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "party_supply_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "party_supply_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "toy_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "toy_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "toy_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "toy_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "computer_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "computer_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "computer_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "computer_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "appliance_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "appliance_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "appliance_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "appliance_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "antique_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "antique_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "antique_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "antique_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hardware_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hardware_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hardware_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hardware_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "discount_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "discount_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "discount_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "discount_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gift_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gift_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gift_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "gift_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shoe_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shoe_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shoe_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "shoe_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sporting_goods_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sporting_goods_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sporting_goods_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sporting_goods_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jewelry_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jewelry_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jewelry_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "jewelry_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pet_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pet_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pet_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pet_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_phone_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_phone_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_phone_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_phone_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "furniture_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "furniture_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "furniture_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "furniture_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sunglasses_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sunglasses_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sunglasses_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sunglasses_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mattress_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mattress_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mattress_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mattress_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "souvenir_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "souvenir_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "souvenir_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "souvenir_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_bookstore_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_bookstore_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_bookstore_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "used_bookstore_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "temp_agency_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "temp_agency_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "temp_agency_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "temp_agency_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "translation_services_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "translation_services_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "translation_services_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "translation_services_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tobacco_shop_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tobacco_shop_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tobacco_shop_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "tobacco_shop_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpet_cleaning_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpet_cleaning_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpet_cleaning_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpet_cleaning_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "architect_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "architect_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "architect_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "architect_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "photographer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "photographer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "photographer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "photographer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "painting_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "painting_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "painting_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "painting_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "graphic_designer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "graphic_designer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "graphic_designer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "graphic_designer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lawyer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lawyer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lawyer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "lawyer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "legal_services_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "legal_services_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "legal_services_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "legal_services_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landscaping_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landscaping_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landscaping_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "landscaping_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpenter_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpenter_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpenter_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "carpenter_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "printing_services_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "printing_services_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "printing_services_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "printing_services_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "storage_facility_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "storage_facility_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "storage_facility_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "storage_facility_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plumbing_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plumbing_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plumbing_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "plumbing_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "web_designer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "web_designer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "web_designer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "web_designer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marketing_agency_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marketing_agency_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marketing_agency_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marketing_agency_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roofing_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roofing_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roofing_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "roofing_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "electrician_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "electrician_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "electrician_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "electrician_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "advertising_agency_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "advertising_agency_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "advertising_agency_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "advertising_agency_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coworking_space_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coworking_space_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coworking_space_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coworking_space_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "handyman_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "handyman_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "handyman_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "handyman_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "videographer_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "videographer_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "videographer_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "videographer_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_cleaning_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_cleaning_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_cleaning_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pool_cleaning_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pressure_washing_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pressure_washing_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pressure_washing_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pressure_washing_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_store_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_store_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_store_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "adult_store_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "courthouse_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "courthouse_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "courthouse_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "courthouse_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "police_department_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "police_department_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "police_department_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "police_department_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fire_department_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fire_department_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fire_department_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "fire_department_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skate_park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skate_park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skate_park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "skate_park_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "synagogue_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "synagogue_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "synagogue_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "synagogue_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_security_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_security_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_security_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "home_security_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bus_station_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bus_station_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bus_station_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "bus_station_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "metro_station_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "metro_station_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "metro_station_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "metro_station_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mosque_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mosque_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mosque_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mosque_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baptist_church_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baptist_church_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baptist_church_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "baptist_church_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "train_station_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "train_station_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "train_station_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "train_station_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "playground_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "playground_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "playground_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "playground_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "catholic_church_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "catholic_church_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "catholic_church_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "catholic_church_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "post_office_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "post_office_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "post_office_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "post_office_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "community_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "community_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "community_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "community_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_walk_min_1",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_cycle_min_1",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "park_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "buddhist_temple_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "buddhist_temple_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "buddhist_temple_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "buddhist_temple_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hindu_temple_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hindu_temple_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hindu_temple_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "hindu_temple_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "town_hall_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "town_hall_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "town_hall_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "town_hall_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pentecostal_church_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pentecostal_church_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pentecostal_church_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pentecostal_church_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "evangelical_church_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "evangelical_church_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "evangelical_church_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "evangelical_church_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sikh_temple_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sikh_temple_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sikh_temple_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "sikh_temple_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meditation_center_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meditation_center_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meditation_center_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "meditation_center_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beach_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beach_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beach_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "beach_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dog_park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dog_park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dog_park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "dog_park_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marina_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marina_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marina_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "marina_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "airport_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_truck_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_truck_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_truck_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_truck_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "property_management_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "property_management_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "property_management_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "property_management_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_court_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_court_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_court_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "food_court_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_storage_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_storage_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_storage_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "luggage_storage_score",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_home_park_walk_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_home_park_cycle_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_home_park_drive_min",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "mobile_home_park_score",
+      "type": "DOUBLE"
+    }
+  ]
+}

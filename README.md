@@ -1,50 +1,62 @@
 # Retail Location Similarity
 
-Find retail locations similar to your best-performing stores
+Retail Location Similarity is a local geographic-embedding search tool for finding areas like a reference retail location.
 
-Retail Location Similarity is a geospatial tool for comparing potential locations with a known reference store. It represents each area as an H3 feature vector, calculates Leo’s calibrated distance score and shows the closest matches on a map.
+Each H3 cell has a vector of nearby places, buildings, land use and access features. Supply a location, read its geographic vector and compare it with other cells. The algorithm works with compatible matrices for any region; the included verified example is London in December 2025.
 
-[Open demo](https://preview.atelierneyra.com/apps/retail-location-similarity/) · [Project website](https://atelierneyra.com/retail-location-similarity/) · [Product tour](docs/product-tour.md) · [Documentation](https://docs.atelierneyra.com/retail-location-similarity/overview/)
+[Product tour](docs/product-tour.md) · [Data and setup](docs/london-data.md) · [Use with an agent](skills/retail-location-similarity/SKILL.md) · [Project website](https://atelierneyra.com/retail-location-similarity/)
 
-![Retail Location Similarity](https://atelierneyra.com/assets/product-motion-v4/retail-location-similarity.jpg)
-
-## Product areas
-
-| Area | What you can do |
-| --- | --- |
-| Reference location | Choose Covent Garden, Shoreditch or Soho, or enter coordinates within the supplied sample cells. |
-| Feature comparison | Normalize numeric dimensions and calculate location similarity. |
-| Nearby exclusion | Compare other areas after excluding the reference cell’s immediate 15-ring H3 neighbourhood. |
-| Ranked map | Inspect highlighted matches, similarity scores and the leading results; select a cell as the next reference. |
-| Reusable scorer | Run the Python/DuckDB calculation with a feature matrix you can use and attribute. |
-
-## Explore the example
-
-Choose **Covent Garden**, wait for the calculated matches, then select a highlighted cell to compare from that location. The [product tour](docs/product-tour.md) follows the calculation and links its controls, scorer and data generator.
-
-The bundled matrix contains 90 generated records across five synthetic features. Coordinates identify real H3 cells; the feature values illustrate the method. You choose a reference store using your own performance records; this engine compares its geographic context.
+```mermaid
+flowchart LR
+  L[Location] --> E[Geographic feature vector]
+  E --> S[Normalized comparison]
+  S --> M[Ranked matching locations]
+```
 
 ## Run locally
 
-Requires Python 3.10 or newer.
+Python 3.11 or newer:
 
 ```sh
 git clone https://github.com/latintzar/retail-location-similarity.git
 cd retail-location-similarity
+python location.py compare --preset covent-garden
+```
+
+This reads an original retained result immediately, using the standard library:
+
+```text
+Reference: Covent Garden
+Compared cells: 131,596
+Features: 1,956
+Matches: 100
+1. 8a195da4954ffff  84.466124
+```
+
+Shoreditch and Soho are also available. `--json` returns all 100 matches, scores and the original matrix hash:
+
+```sh
+python location.py examples
+python location.py compare --preset shoreditch --json > matches.json
+```
+
+## Your location and matrix
+
+```sh
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-python server.py
+python tools/fetch_london.py
+python location.py embed --lat 51.5117 --lng -0.124 --json > vector.json
+python location.py compare --lat 51.5117 --lng -0.124 --top 100 --json
 ```
 
-Open **http://127.0.0.1:18869**. The calculation runs locally with the included generated data. The map uses OpenStreetMap tiles.
+The fetcher verifies the original **56,163,548-byte** matrix before installing it. For another region, connect your own H3 resolution-10 Parquet through `--matrix PATH` or `RETAIL_MATRIX_PATH`. The [data guide](docs/london-data.md) explains the schema, calculation and resource limits. The CLI uses local files and local computation; network access is an explicit data-download or optional local-map action.
 
 ## Source and data
 
-The independently expressed scorer preserves Leo’s historical calibrated distance approximation inspired by DIEM. [Product decisions and source map](docs/product-tour.md#scoring-and-data-decisions) explain its distinction from the authors’ reference implementation.
+The original London matrix contains **131,596 cells × 1,956 numeric features**, with three retained full-matrix comparisons. [Download the original data](https://github.com/latintzar/retail-location-similarity/releases/download/london-2025-12-v1/london-res10.parquet), inspect its [manifest](data/london/manifest.json) and [schema](data/london/schema.json), or read the [product and module tour](docs/product-tour.md).
 
-A separate historical London matrix was privately verified at 131,596 H3 cells and 1,956 numeric features; it remains outside this package. Global matrix completion remains unverified. The recovered [Geospatial Agent tools and ETL source](https://github.com/latintzar/geospatial-agent) contain the broader original work.
-
-Original code is [MIT licensed](LICENSE). Dependencies, map tiles and geographic data retain their [own terms](THIRD-PARTY-NOTICES.md). Keep generated inputs labelled and review the provenance of a replacement matrix.
+Code is [MIT licensed](LICENSE); data is **ODbL 1.0** with preserved [upstream notices](data/london/NOTICES.md). The retained [global ETL source](https://github.com/latintzar/geospatial-agent/tree/main/backend/etl/global) describes the broader geographic feature-building work. Completed global output remains unverified. The exact historical London build configuration and per-record supplier ledger were not embedded; [provenance](docs/london-data.md#provenance-and-reached-stage) records that boundary.
 
 [made by atelier neyra](https://atelierneyra.com)
