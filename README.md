@@ -2,17 +2,29 @@
 
 Find retail locations similar to your best-performing stores
 
-Retail Location Similarity is a map tool for comparing locations using H3 feature vectors and Leo’s calibrated distance score.
+Retail Location Similarity is a geospatial tool for comparing potential locations with a known reference store. It represents each area as an H3 feature vector, calculates Leo’s calibrated distance score and shows the closest matches on a map.
+
+[Open demo](https://preview.atelierneyra.com/apps/retail-location-similarity/) · [Project website](https://atelierneyra.com/retail-location-similarity/) · [Product tour](docs/product-tour.md) · [Documentation](https://docs.atelierneyra.com/retail-location-similarity/overview/)
 
 ![Retail Location Similarity](https://atelierneyra.com/assets/product-motion-v4/retail-location-similarity.jpg)
 
-[Open demo](https://preview.atelierneyra.com/apps/retail-location-similarity/) · [Project website](https://atelierneyra.com/retail-location-similarity/) · [Documentation](https://docs.atelierneyra.com/retail-location-similarity/overview/) · [GitHub](https://github.com/latintzar/retail-location-similarity)
+## Product areas
 
-## What it does
+| Area | What you can do |
+| --- | --- |
+| Reference location | Choose Covent Garden, Shoreditch or Soho, or enter coordinates within the supplied sample cells. |
+| Feature comparison | Normalize numeric dimensions and calculate location similarity. |
+| Nearby exclusion | Compare other areas after excluding the reference cell’s immediate 15-ring H3 neighbourhood. |
+| Ranked map | Inspect highlighted matches, similarity scores and the leading results; select a cell as the next reference. |
+| Reusable scorer | Run the Python/DuckDB calculation with a feature matrix you can use and attribute. |
 
-Choose an example reference location or enter coordinates within the sample cells. The app normalizes numeric feature dimensions, computes similarity, excludes the nearby 15-ring H3 neighbourhood, and maps ranked matches. The bundled dataset contains 90 generated records and five synthetic features. Scores are actual calculations on those values; they do not describe real London locations.
+## Explore the example
 
-## Run
+Choose **Covent Garden**, wait for the calculated matches, then select a highlighted cell to compare from that location. The [product tour](docs/product-tour.md) follows the calculation and links its controls, scorer and data generator.
+
+The bundled matrix contains 90 generated records across five synthetic features. Coordinates identify real H3 cells; the feature values illustrate the method. You choose a reference store using your own performance records; this engine compares its geographic context.
+
+## Run locally
 
 Requires Python 3.10 or newer.
 
@@ -25,12 +37,14 @@ pip install -r requirements.txt
 python server.py
 ```
 
-Open http://127.0.0.1:18869. The map uses OpenStreetMap tiles. The synthetic scorer needs no account or provider credentials.
+Open **http://127.0.0.1:18869**. The calculation runs locally with the included generated data. The map uses OpenStreetMap tiles.
 
-## Status and source
+## Source and data
 
-The independent scorer preserves Leo’s historical calibrated distance approximation inspired by DIEM; it is not the authors’ published reference implementation. A separate historical London matrix was privately verified at 131,596 H3 cells and 1,956 numeric features; it is not included. Completion of a global matrix has not been verified. The recovered agent’s [tools and ETL source](https://github.com/latintzar/geospatial-agent) contain the broader original work. Original code is MIT licensed; dependencies and map data retain their own terms.
+The independently expressed scorer preserves Leo’s historical calibrated distance approximation inspired by DIEM. [Product decisions and source map](docs/product-tour.md#scoring-and-data-decisions) explain its distinction from the authors’ reference implementation.
 
-## Agent instructions
+A separate historical London matrix was privately verified at 131,596 H3 cells and 1,956 numeric features; it remains outside this package. Global matrix completion remains unverified. The recovered [Geospatial Agent tools and ETL source](https://github.com/latintzar/geospatial-agent) contain the broader original work.
 
-Keep synthetic examples labelled and preserve the distinction between observed geographic data and generated features. Review data provenance and applicable third-party terms before substituting a real dataset. Run `python server.py` and exercise a preset after changes.
+Original code is [MIT licensed](LICENSE). Dependencies, map tiles and geographic data retain their [own terms](THIRD-PARTY-NOTICES.md). Keep generated inputs labelled and review the provenance of a replacement matrix.
+
+[made by atelier neyra](https://atelierneyra.com)
